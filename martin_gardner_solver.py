@@ -45,18 +45,19 @@ def solve(startNum, endNum):
     print("Numbers with a persistence of five: " + str(fivePersistenceNumbers))
 
 
-def has_fivePersistence(num):
-    return findPersistence(num) == 5
+def has_givenPersistence(x, num):
+    return findPersistence(num) == x
 
 
-def findSmallestFivePersistenceNum(num):
-    while has_fivePersistence(num) == False:
+def findSmallestFivePersistenceNum(x):
+    num = 1
+    while has_givenPersistence(x, num) == False:
         print("\nPeristence for number: " + str(num))
         num += 1
-        has_fivePersistence(num)
+        has_givenPersistence(x, num)
 
-    print(str(num) + " is the lowest number with 5 persistence")
+    print(str(num) + " is the lowest number with " + str(x) + " persistence")
 
 
 #solve(1000, 9999)
-findSmallestFivePersistenceNum(1)
+findSmallestFivePersistenceNum(6)
