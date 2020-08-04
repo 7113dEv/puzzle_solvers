@@ -7,11 +7,15 @@ What is the smallest number of persistence five?
 '''
 
 
-def multiplyDigits(number):
+def multiplyDigits(number):  # multiplyDigits(121)
     # Splits each digit in a given number individually into an array
-    digits = [int(d) for d in str(number)]
+    digits = [int(d) for d in str(number)]  # digits = [1, 2, 1]
+    currentProduct = digits[0]  # currentProduct = 1
     # Multiply the digits together
-    return digits[0] * digits[1]
+    for i in range(1, len(digits)):
+        currentProduct = currentProduct * digits[i]
+
+    return currentProduct
 
 
 def findPersistence(number):
@@ -32,12 +36,13 @@ def findPersistence(number):
     return persistence
 
 
-def solve():
-    for x in range(10, 99):
+def solve(startNum, endNum):
+    for x in range(startNum, endNum+1):
+        print("Peristence for number: " + str(x))
         fivePersistenceNumbers = []
         if findPersistence(x) == 5:
             fivePersistenceNumbers.append(x)
-    print(fivePersistenceNumbers)
+    print("Numbers with a persistence of five: " + str(fivePersistenceNumbers))
 
 
-solve()
+solve(1000, 9999)
