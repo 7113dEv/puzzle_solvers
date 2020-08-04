@@ -49,7 +49,7 @@ def has_givenPersistence(x, num):
     return findPersistence(num) == x
 
 
-def findSmallestFivePersistenceNum(x):
+def findSmallestPersistence(x):
     num = 1
     while has_givenPersistence(x, num) == False:
         print("\nPeristence for number: " + str(num))
@@ -60,4 +60,4 @@ def findSmallestFivePersistenceNum(x):
 
 
 #solve(1000, 9999)
-findSmallestFivePersistenceNum(6)
+findSmallestPersistence(6)
