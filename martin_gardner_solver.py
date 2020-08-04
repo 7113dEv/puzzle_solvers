@@ -32,7 +32,7 @@ def findPersistence(number):
 
     persistence = len(productList)
     print("Done")
-    print("Persistence length: " + str(persistence))
+    print("Persistence length: " + str(persistence)+"\n")
     return persistence
 
 
@@ -45,4 +45,18 @@ def solve(startNum, endNum):
     print("Numbers with a persistence of five: " + str(fivePersistenceNumbers))
 
 
-solve(1000, 9999)
+def has_fivePersistence(num):
+    return findPersistence(num) == 5
+
+
+def findSmallestFivePersistenceNum(num):
+    while has_fivePersistence(num) == False:
+        print("\nPeristence for number: " + str(num))
+        num += 1
+        has_fivePersistence(num)
+
+    print(str(num) + " is the lowest number with 5 persistence")
+
+
+#solve(1000, 9999)
+findSmallestFivePersistenceNum(1)
