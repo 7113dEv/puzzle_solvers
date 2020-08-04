@@ -1,1 +1,2 @@
-# sudoku_solver
+# Puzzle solver scripts
+Sudoku
