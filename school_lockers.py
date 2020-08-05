@@ -5,26 +5,29 @@ the fourth to go to the fourth locker and so on. The process is completed with t
 '''
 
 # Creates 1000 lockers
-lockerNumber = []
+locker = []
 for x in range(0, 1000):
-    lockerNumber.append(0)
+    locker.append(0)
 
 # Creates 1000 students
 student = []
 for x in range(1, 1001):
     student.append(x)
 
-# Open or Close a given locker
+# Send a student to interact with every nth locker
 
 
-def interactWithLocker(num):
-    if lockerNumber[num] == 0:
-        lockerNumber[num] == 1
-    else:
-        lockerNumber[num] == 0
+def sendStudent(n, locker):
+    for i in range(0, len(locker), n):
+        if (i + n) > len(locker):
+            if locker[i] == 0:
+                locker[i] = 1
+            else:
+                locker[i] = 0
+            return locker
+        else:
+
+    return locker
 
 
-print(lockerNumber)
-interactWithLocker(0)
-print(lockerNumber)
-# def locker_present(x):
+print(sendStudent(1, locker))
