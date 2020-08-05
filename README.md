@@ -1,7 +1,7 @@
 # Puzzle solver scripts
 
 # Sudoku
-  -Solves a solvable Sudoku board
+  -Solves a solvable Sudoku board\n
   -Solves the world's hardest Sudoku puzzle
 
 # Martin Gardener Solver
