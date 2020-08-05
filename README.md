@@ -1,4 +1,4 @@
-# Puzzle solver scripts
+*Puzzle solver scripts*
 
 # Sudoku
   -Solves a solvable Sudoku board
