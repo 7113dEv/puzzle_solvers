@@ -18,7 +18,8 @@ for x in range(1, 1001):
 
 
 def sendStudent(n, locker):
-    for i in range(0, len(locker), n):
+    # Iterate over every Nth locker
+    for i in range(n-1, len(locker), n):
         if (i + n) > len(locker):
             if locker[i] == 0:
                 locker[i] = 1
@@ -26,8 +27,22 @@ def sendStudent(n, locker):
                 locker[i] = 0
             return locker
         else:
-
+            if locker[i] == 0:
+                locker[i] = 1
+            else:
+                locker[i] = 0
     return locker
 
 
-print(sendStudent(1, locker))
+# Solve Student Lockers problem
+for i in student:
+    sendStudent(i, locker)
+print(locker)
+# Count amount of open lockers
+openLockers = 0
+for x in locker:
+    if x == 1:
+        openLockers += 1
+
+# print amount of open lockers
+print(str(openLockers) + " lockers will be open")
