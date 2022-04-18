@@ -1,6 +1,6 @@
 import math
-from project_euler.problem_utils import is_factor, is_prime
 
+from project_euler.utils import is_factor, is_prime
 
 """
 Problem 1:
