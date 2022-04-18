@@ -1,5 +1,5 @@
 import math
-from project_euler.problem_utils import is_prime, is_factor
+from project_euler.problem_utils import is_factor, is_prime
 
 
 """
@@ -29,8 +29,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed x,
 
 
 def even_fibonacci_numbers(x):
-    # I do not want to do this again
-    # Will update when possible
+    # Will update
     pass
 
 
@@ -55,3 +54,5 @@ def largest_prime_factor(number):
             return the_answer
 
     return number
+
+
