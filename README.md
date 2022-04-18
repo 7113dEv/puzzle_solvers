@@ -1,5 +1,8 @@
 *Puzzle solver scripts*
 
+# Project Euler Folder
+  -Contains scripts for all completed solutions
+
 # Sudoku
   -Solves a solvable Sudoku board
   
